@@ -1,0 +1,249 @@
+{
+    "security.workspace.trust.enabled": false,
+    //for my vim configures begin
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
+    "vim.statusBarColors.insert": "#BF616A",
+    "vim.statusBarColors.visual": "#B48EAD",
+    "vim.statusBarColors.visualline": "#B48EAD",
+    "vim.statusBarColors.visualblock": "#A3BE8C",
+    "vim.statusBarColors.replace": "#D08770",
+    "vim.statusBarColors.commandlineinprogress": "#E0E0E0",
+    "vim.statusBarColors.searchinprogressmode": "#E0E0E0",
+    "vim.statusBarColors.surroundinputmode": "#E0E0E0",
+    "vim.statusBarColors.easymotionmode": "#007ACC",
+    "vim.statusBarColors.easymotioninputmode": "#007ACC",
+
+    "vim.easymotion": true,
+    "vim.easymotionMarkerBackgroundColor": "rgba(0, 0, 0, 0.7)",
+    "vim.easymotionMarkerForegroundColorOneChar": "pink",
+
+    // "vim.leader": "\\",
+    "vim.leader": "<space>",
+
+    //key map
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-c>": false,
+        "<C-x>": false,
+        "<C-f>": false,
+        "<C-h>": false,
+        "<C-s>": false,
+        "<C-z>": false,
+        "<C-p>": false,
+        "<C-n>": false,
+        "<C-b>": false,
+        "<C-w>": false,
+        "<C-y>": false,
+        "<C-S-F>": false,
+        "<C-S-E>": false
+    },
+
+    "vim.normalModeKeyBindings": [
+        {
+          "before": ["<leader>", "q"],
+          "after": [":", "q", "<Enter>"]
+        },
+        {
+          "before": ["<leader>", "w"],
+          "after": [":", "w", "<Enter>"]
+        },
+        {
+          "before": ["<tab>"],
+          "commands": ["workbench.action.nextEditor"]
+        },
+        {
+          "before": ["<S-tab>"],
+          "commands": ["workbench.action.previousEditor"]
+        },
+        {
+          "before": ["<C-k>"],
+          "commands": ["scrollLineUp"],
+        //   "when": "editorTextFocus && !editorHasSelection && !editorHasMultipleSelections"
+        },
+        {
+          "before": ["<C-j>"],
+          "commands": ["scrollLineDown"],
+        },
+        {
+            "before": ["H"],
+            "after": ["^"]
+        },
+        {
+            "before": ["L"],
+            "after": ["$"]
+        },
+        {
+        //   "before": ["<C-k>"],
+        //   "after" : ["<C-k>", "z", "z"],
+        },
+      ],
+      "vim.insertModeKeyBindings": [
+        {
+          "before": ["j", "j"],
+          "after": ["<Esc>"]
+        },
+        {
+          "before": ["j", "k"],
+          "after": ["<Esc>"]
+        },
+        {
+          "before": ["k", "k"],
+          "after": ["<Esc>"]
+        }
+      ],
+        // Visual mode
+        "vim.visualModeKeyBindings": [
+            {
+            "before": [">"],
+            "after": [">", "g", "v"]
+            },
+            {
+            "before": ["<"],
+            "after": ["<", "g", "v"]
+            },
+        ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+        "before": ["<C-u>"],
+        "after": ["<C-u>", "z", "z"]
+        },
+        {
+        "before": ["<C-d>"],
+        "after": ["<C-d>", "z", "z"]
+        },
+        {
+        "before": ["<leader>", "n"],
+        "commands": [":nohl"]
+        },
+        {
+        "before": ["<leader>", "s"],
+        "commands": ["workbench.action.splitEditor"]
+        },
+        {
+        "before": ["<leader>", "d"],
+        "commands": ["workbench.action.splitEditorDown"]
+        },
+        {
+        "before": ["<leader>", "f"],
+        "commands": ["revealInExplorer"]
+        },
+        {
+        "before": ["<leader>", "l"],
+        "after": ["$"]
+        },
+        /*  close other groups */
+        {
+        "before": ["<leader>", "o", "g"],
+        "commands": ["workbench.action.closeEditorsInOtherGroups"]
+        },
+        /*close other files */
+        {
+        "before": ["<leader>", "o", "f"],
+        "commands": ["workbench.action.closeOtherEditors"]
+        },
+        /* open editor at index */
+        {
+        "before": ["<leader>", "1"],
+        "commands": ["workbench.action.openEditorAtIndex1"]
+        },
+        {
+        "before": ["<leader>", "2"],
+        "commands": ["workbench.action.openEditorAtIndex2"]
+        },
+        {
+        "before": ["<leader>", "3"],
+        "commands": ["workbench.action.openEditorAtIndex3"]
+        },
+        {
+        "before": ["<leader>", "4"],
+        "commands": ["workbench.action.openEditorAtIndex4"]
+        },
+        {
+        "before": ["<leader>", "5"],
+        "commands": ["workbench.action.openEditorAtIndex5"]
+        },
+        {
+        "before": ["<leader>", "6"],
+        "commands": ["workbench.action.openEditorAtIndex6"]
+        },
+        /* open editor group */
+        {
+        "before": ["<leader>", "g", "1"],
+        "commands": ["workbench.action.focusFirstEditorGroup"]
+        },
+        {
+        "before": ["<leader>", "g", "2"],
+        "commands": ["workbench.action.focusSecondEditorGroup"]
+        },
+        {
+            "before": ["<leader>", "g", "3"],
+            "commands": ["workbench.action.focusThirdEditorGroup"]
+        },
+        {
+            "before": ["<leader>", "g", "4"],
+            "commands": ["workbench.action.focusFourthEditorGroup"]
+        },
+        {
+            "before": ["<leader>", "g", "5"],
+            "commands": ["workbench.action.focusFifthEditorGroup"]
+        },
+        {
+            "before": ["<leader>", "g", "6"],
+            "commands": ["workbench.action.focusSixthEditorGroup"]
+        }
+
+
+    ],
+    //for my vim configures end
+
+    "[cpp]": {
+        "editor.quickSuggestions": {
+            "other": "on",
+            "comments": "on",
+            "strings": "on"
+        }
+    },
+    "[c]": {
+        "editor.quickSuggestions": {
+            "other": "on",
+            "comments": "on",
+            "strings": "on"
+        }
+    },
+    "editor.tabSize": 4,
+    "editor.useTabStops": true,
+    "editor.detectIndentation": false,
+    "C_Cpp.intelliSenseEngine": "default",
+    "files.autoGuessEncoding": true,
+    "C_Cpp.intelliSenseEngineFallback": "enabled",
+    "C_Cpp.autocomplete": "default",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "search.followSymlinks": false,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#B48EAD",
+        "statusBar.noFolderBackground": "#B48EAD",
+        "statusBar.debuggingBackground": "#B48EAD",
+        "statusBar.foreground": "#434C5E",
+        "statusBar.debuggingForeground": "#434C5E"
+    },
+    "editor.minimap.enabled": false,
+    "Lingma.HttpProxyConfigurationURL": "http://192.168.29.57:8089",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "git.openRepositoryInParentFolders": "never",
+    "search.exclude": {
+        "**/oe-logs/**": true,
+        "**/tags":true,
+    },
+    "Lingma.HttpProxySettings": "manual",
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.wordWrap": "on",
+
+    //copy from github
+}
