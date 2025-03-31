@@ -244,6 +244,8 @@
     "files.trimFinalNewlines": true,
     "editor.stickyScroll.enabled": true,
     "editor.wordWrap": "on",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line"，
 
     //copy from github
 }
