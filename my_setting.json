@@ -2,7 +2,7 @@
     "security.workspace.trust.enabled": false,
     //for my vim configures begin
     "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
+    // "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.statusBarColorControl": true,
@@ -201,23 +201,30 @@
     ],
     //for my vim configures end
 
+        "editor.insertSpaces": false, // tab not is space steven
     "[cpp]": {
         "editor.quickSuggestions": {
             "other": "on",
             "comments": "on",
             "strings": "on"
-        }
+        },
+        "editor.defaultFormatter": "xaver.clang-format",
+        // "editor.insertSpaces": false, // tab not is space steven
     },
     "[c]": {
         "editor.quickSuggestions": {
             "other": "on",
             "comments": "on",
             "strings": "on"
-        }
+        },
+        "editor.defaultFormatter": "xaver.clang-format",
+        // "editor.insertSpaces": false, // tab not is space
+        // "editor.tabSize": 4
     },
     "editor.tabSize": 4,
     "editor.useTabStops": true,
     "editor.detectIndentation": false,
+    "editor.matchBrackets": "always",
     "C_Cpp.intelliSenseEngine": "default",
     "files.autoGuessEncoding": true,
     "C_Cpp.intelliSenseEngineFallback": "enabled",
@@ -225,12 +232,12 @@
     "C_Cpp.autocompleteAddParentheses": true,
     "search.followSymlinks": false,
     "workbench.colorCustomizations": {
-        "statusBar.background": "#B48EAD",
-        "statusBar.noFolderBackground": "#B48EAD",
-        "statusBar.debuggingBackground": "#B48EAD",
-        "statusBar.foreground": "#434C5E",
-        "statusBar.debuggingForeground": "#434C5E"
-    },
+		"statusBar.background": "#8FBCBB",
+		"statusBar.noFolderBackground": "#8FBCBB",
+		"statusBar.debuggingBackground": "#8FBCBB",
+		"statusBar.foreground": "#434C5E",
+		"statusBar.debuggingForeground": "#434C5E"
+	},
     "editor.minimap.enabled": false,
     "Lingma.HttpProxyConfigurationURL": "http://192.168.29.57:8089",
     "workbench.colorTheme": "Gruvbox Dark Medium",
@@ -244,8 +251,39 @@
     "files.trimFinalNewlines": true,
     "editor.stickyScroll.enabled": true,
     "editor.wordWrap": "on",
-    "gitlens.currentLine.enabled": false,
-    "gitlens.hovers.currentLine.over": "line"，
 
     //copy from github
+    // "editor.defaultFormatter": "xaver.clang-format",
+    "clang-format.executable": "/usr/bin/clang-format",
+    "C_Cpp.clang_format_style": "file",
+    "C_Cpp.clang_format_path": "~/.clang_format",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.advanced.messages": {
+        "suppressLineUncommittedWarning": true
+	},
+	"Lingma.cloudModelAutoTriggerGenerateLength": "long",
+	"Lingma.cloudModelManualTriggerGenerateLength": "long",
+	"Lingma.localMachineModelInferenceMode": "speed",
+	"Lingma.localMachineModelMaxCandidateNum": 5,
+	"Lingma.DisplayLanguage": "简体中文",
+    "gitlens.views.commitDetails.files.layout": "list",
+    "editor.guides.bracketPairs": "active",
+    "editor.guides.bracketPairsHorizontal": "active",
+    "editor.bracketPairColorization.enabled": true,
+
+    // ========== GitLens 基础配置 ==========
+    "gitlens.mode": "review",  // 默认进入代码审查模式，减少冗余信息
+    // ========== 界面优化 ==========
+    "gitlens.codeLens.enabled": false,  // 关闭默认CodeLens（按需手动启用）
+    "gitlens.views.repositories.autoRefresh": false,  // 禁止仓库视图自动刷新
+
+    // ========== 提交记录优化 ==========
+    "gitlens.historyExplorer.avatars": false,  // 关闭提交者头像显示
+    "gitlens.graph.scrollMarkers.enabled": false,  // 禁用提交图滚动标记
+    "gitlens.hovers.detailsMarkdownFormat": "compact",  // 紧凑模式显示悬停信息
+
+    // ========== 高级功能控制 ==========
+    "gitlens.advanced.fileHistoryFollowsRenames": true,  // 跟踪文件重命名历史
+    "gitlens.blame.ignoreWhitespace": true,  // 忽略空格变更的blame追踪
+    "gitlens.keymap": "alternate",  // 使用简化的快捷键映射方案
 }
